@@ -2298,18 +2298,34 @@
       <body
         class="page-template page-template-page-templates page-template-page-accueil page-template-page-templatespage-accueil-php page page-id-8664 page-parent pennon default en fixed-header event-bar homepage hg-lazy-load vue-ready">
         
+        <!-- TODO delay analytics -->
         <script data-role="hg-analytic-tracker" data-tracker-name="allwebsite" data-tracker-id="UA-701254-10">
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          window.addEventListener( 'load', function() {
+            setTimeout( function() {
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                
+                ga("create","UA-701254-10","auto","allwebsite");
+                ga("allwebsite.send","pageview");
+                
+                document.addEventListener('hg-history-push-state', function(e) {
+                ga("allwebsite.send","pageview", { location: location.href });
+                });
+            }, 1100 );
+          } );
+          // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
           
-          ga("create","UA-701254-10","auto","allwebsite");
-          ga("allwebsite.send","pageview");
+          // ga("create","UA-701254-10","auto","allwebsite");
+          // ga("allwebsite.send","pageview");
           
-          document.addEventListener('hg-history-push-state', function(e) {
-          ga("allwebsite.send","pageview", { location: location.href });
-          });
+          // document.addEventListener('hg-history-push-state', function(e) {
+          // ga("allwebsite.send","pageview", { location: location.href });
+          // });
         </script> 
         
         <noscript><iframe
@@ -4508,17 +4524,17 @@
           var hgBlogPost = {"blogPostAjaxUrl":"\/\/blog.hgregoire.com\/do_ajax.php"};
           /*  */
         </script> 
-        
-        <script type='text/javascript' src='https://cfwww.hgregoire.com/modules/hgblogpost/assets/js/hg-blogpost.js?hgver=3.0.1.55'></script> 
-        
-        <script type='text/javascript' src='https://cfwww.hgregoire.com/template/js/infobox_packed.js?hgver=3.0.1.55'></script> 
+        <!-- TODO defer the script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/modules/hgblogpost/assets/js/hg-blogpost.js?hgver=3.0.1.55'></script> 
+        <!-- TODO defer the script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/template/js/infobox_packed.js?hgver=3.0.1.55'></script> 
         
         <script type='text/javascript'>/*  */
           var hgregoire = {"ajaxUrl":"https:\/\/www.hgregoire.com\/do_ajax.php?locale=fr_FR","blogUrl":"https:\/\/www.hgregoire.com","themeUrl":"https:\/\/www.hgregoire.com\/template","webServiceUrl":"https:\/\/proxyws.hgregoire.com\/","staticUrl":"https:\/\/cfwww.hgregoire.com"};
           /*  */
         </script> 
-        
-        <script type='text/javascript' src='https://cfwww.hgregoire.com/template/js/index.js?hgver=3.0.1.55'></script> 
+        <!-- TODO defer the script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/template/js/index.js?hgver=3.0.1.55'></script> 
         
         <script type='text/javascript' src='https://cfwww.hgregoire.com/modules/hglazyload/assets/js/hg-lazy-load.min.js?hgver=3.0.1.55'></script> 
         
