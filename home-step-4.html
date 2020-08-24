@@ -2308,18 +2308,36 @@
       </head>
       <body
         class="page-template page-template-page-templates page-template-page-accueil page-template-page-templatespage-accueil-php page page-id-8664 page-parent pennon default en fixed-header event-bar homepage hg-lazy-load vue-ready">
-        <script data-role="hg-analytic-tracker" data-tracker-name="allwebsite" data-tracker-id="UA-701254-10">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+        <script data-role="hg-analytic-tracker" data-tracker-name="allwebsite" data-tracker-id="UA-701254-10">
+          // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
           
-          ga("create","UA-701254-10","auto","allwebsite");
-          ga("allwebsite.send","pageview");
+          // ga("create","UA-701254-10","auto","allwebsite");
+          // ga("allwebsite.send","pageview");
           
-          document.addEventListener('hg-history-push-state', function(e) {
-          ga("allwebsite.send","pageview", { location: location.href });
-          });
-        </script> 
+          // document.addEventListener('hg-history-push-state', function(e) {
+          // ga("allwebsite.send","pageview", { location: location.href });
+          // });
+          window.addEventListener( 'load', function() {
+            setTimeout( function() {
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                
+                ga("create","UA-701254-10","auto","allwebsite");
+                ga("allwebsite.send","pageview");
+                
+                document.addEventListener('hg-history-push-state', function(e) {
+                ga("allwebsite.send","pageview", { location: location.href });
+                });
+            }, 750 );
+          } );
+        </script>
+
         <noscript><iframe
           src="//www.googletagmanager.com/ns.html?id=GTM-K6M5XR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- TODO Delay GTM -->
@@ -4588,7 +4606,18 @@
             </map>
           </div>
         </div>
-        <script src="https://apis.google.com/js/platform.js" async defer>{"lang":"en-CA"}</script> 
+        <!-- TODO delay third party -->
+        <!-- <script src="https://apis.google.com/js/platform.js" async defer>{"lang":"en-CA"}</script> -->
+        <script>
+          window.addEventListener( 'load', function() {
+              setTimeout( function() {
+                  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; 
+                  s.async = true;
+                  s.src = 'https://apis.google.com/js/platform.js';
+                  el.parentNode.insertBefore(s, el);
+              }, 1000 );
+          } );
+        </script>
         <div
           data-role="hg-loader">
           <script type="application/json" data-property-name="domEventCollections">[
