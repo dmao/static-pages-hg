@@ -12669,7 +12669,18 @@
             </map>
           </div>
         </div>
-        <script src="https://apis.google.com/js/platform.js" async defer>{"lang":"fr-CA"}</script> 
+        <!-- TODO delay third party -->
+        <!-- <script src="https://apis.google.com/js/platform.js" async defer>{"lang":"en-CA"}</script> -->
+        <script>
+          window.addEventListener( 'load', function() {
+              setTimeout( function() {
+                  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; 
+                  s.async = true;
+                  s.src = 'https://apis.google.com/js/platform.js';
+                  el.parentNode.insertBefore(s, el);
+              }, 1000 );
+          } );
+        </script>
         <div
           data-role="hg-loader">
           <script type="application/json" data-property-name="domEventCollections">[
