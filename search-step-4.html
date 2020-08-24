@@ -12586,13 +12586,27 @@
         
         <script type='text/javascript' src='https://cfwww.hgregoire.com/modules/hglazyload/assets/js/hg-lazy-load.min.js?hgver=3.0.1.56'></script> 
         
-        <script type="text/javascript">var __lc = {"license":2485721,"group":2};
+        <!-- TODO Delay script. -->
+        <!-- <script type="text/javascript">
+          var __lc = {"license":2485721,"group":1};
           (function() {
             var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
             lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
           })();
-        </script> 
+        </script> -->
+        <script>
+          window.addEventListener( 'load', function() {
+            setTimeout( function() {
+              var __lc = {"license":2485721,"group":1};
+              (function() {
+                var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+                lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+              })();
+            }, 1200 );
+          } );
+        </script>
         <div
           class="modal close-modal" style="background-color: rgba(8,8,8,.8);"
           id="popup-exit-intent_image-map-dialog"
