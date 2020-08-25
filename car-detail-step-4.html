@@ -2231,10 +2231,22 @@
           rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='sitecss-css'  href='main-css-wo-header.min.css' type='text/css' media='all' />
         
         <script type='text/javascript' src='https://cfwww.hgregoire.com/lib/js/jquery/jquery.js?hgver=3.0.1.56-wp'></script> 
-        
-        <script type='text/javascript' src='https://cfwww.hgregoire.com/lib/js/jquery/jquery-migrate.min.js?hgver=3.0.1.56'></script> 
-        
-        <script defer type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3&#038;libraries=geometry,places&#038;key=AIzaSyAhr4FMBF5jC0AL9sI4VlXGmFRQM6m6ALM'></script> 
+        <!-- TODO defer script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/lib/js/jquery/jquery-migrate.min.js?hgver=3.0.1.56'></script> 
+        <!-- TODO delay map -->
+        <!-- <script  type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3&#038;libraries=geometry,places&#038;key=AIzaSyAhr4FMBF5jC0AL9sI4VlXGmFRQM6m6ALM'></script>
+        <script> -->
+        <script>  
+          window.addEventListener( 'load', function() {
+              setTimeout( function() {
+                  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; 
+                  s.async = true;
+                  s.src = 'https://maps.googleapis.com/maps/api/js?v=3&#038;libraries=geometry,places&#038;key=AIzaSyAhr4FMBF5jC0AL9sI4VlXGmFRQM6m6ALM';
+                  el.parentNode.insertBefore(s, el);
+              }, 1200 );
+          } );
+        </script>
+      
         
         <script>var hgLanguage = {"translation":{"months":["janvier","f\u00e9vrier","mars","avril","mai","juin","juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"],"weekdays":["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"],"weekdayssmall":["Dim","Lun","Mar","Mer","Jeu","Ven","Sam"]}};</script> <script>/*<![CDATA[*/var hgCarReservation = {"reserveAjaxUrl":"https:\/\/www.hgregoire.com\/do_ajax.php?action={ACTION}&locale=fr_CA"};/*]]>*/</script> 
         
@@ -2307,6 +2319,7 @@
         </script> 
         <noscript><iframe
           src="//www.googletagmanager.com/ns.html?id=GTM-K6M5XR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- TODO delay GTM -->
         <script>/*<![CDATA[*/(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -2320,6 +2333,24 @@
           });
           });/*]]>*/
         </script> 
+        <script>  
+          window.addEventListener( 'load', function() {
+              setTimeout( function() {
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                  })(window,document,'script','dataLayer','GTM-K6M5XR');
+                  
+                  document.addEventListener('hg-history-push-state', function(e) {
+                  dataLayer.push({
+                  'event': 'hg-history-push-state',
+                  'attributes': e.detail.attributes
+                  });
+                  });
+              }, 1000 );
+          } );
+        </script>
         <header
           id="main-header">
           <div
