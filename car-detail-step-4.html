@@ -2320,7 +2320,7 @@
         <noscript><iframe
           src="//www.googletagmanager.com/ns.html?id=GTM-K6M5XR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- TODO delay GTM -->
-        <script>/*<![CDATA[*/(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <!-- <script>/*<![CDATA[*/(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -2332,7 +2332,7 @@
           'attributes': e.detail.attributes
           });
           });/*]]>*/
-        </script> 
+        </script>  -->
         <script>  
           window.addEventListener( 'load', function() {
               setTimeout( function() {
@@ -5605,10 +5605,24 @@
         <script type='text/javascript'>/*  */
           var hgBlogPost = {"blogPostAjaxUrl":"\/\/blog.hgregoire.com\/do_ajax.php"};
           /*  */
-        </script> <script type='text/javascript' src='https://cfwww.hgregoire.com/modules/hgblogpost/assets/js/hg-blogpost.js?hgver=3.0.1.56'></script> <script type='text/javascript'id="carproof-badge-js" data-thirdpartykey="aMYFNuvIIgAUJ3S7MASjMQ==" data-language="fr" src='//badging.carproof.com/Scripts/CarProofBadges.min.js?hgver=3.0.1.56'></script> <script type='text/javascript' src='https://cfwww.hgregoire.com/template/js/infobox_packed.js?hgver=3.0.1.56'></script> <script type='text/javascript'>/*  */
+        </script> 
+        <!-- TODO defer script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/modules/hgblogpost/assets/js/hg-blogpost.js?hgver=3.0.1.56'></script> 
+        
+        <!-- TODO defer script -->
+        <script defer type='text/javascript'id="carproof-badge-js" data-thirdpartykey="aMYFNuvIIgAUJ3S7MASjMQ==" data-language="fr" src='//badging.carproof.com/Scripts/CarProofBadges.min.js?hgver=3.0.1.56'></script> 
+        
+        <!-- TODO defer script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/template/js/infobox_packed.js?hgver=3.0.1.56'></script> 
+        
+        <script type='text/javascript'>/*  */
           var hgregoire = {"ajaxUrl":"https:\/\/www.hgregoire.com\/do_ajax.php?locale=fr_CA","blogUrl":"https:\/\/www.hgregoire.com","themeUrl":"https:\/\/www.hgregoire.com\/template","webServiceUrl":"https:\/\/proxyws.hgregoire.com\/","staticUrl":"https:\/\/cfwww.hgregoire.com"};
           /*  */
-        </script> <script type='text/javascript' src='https://cfwww.hgregoire.com/template/js/index.js?hgver=3.0.1.56'></script> <script type='text/javascript' src='https://cfwww.hgregoire.com/modules/hglazyload/assets/js/hg-lazy-load.min.js?hgver=3.0.1.56'></script> 
+        </script> 
+        <!-- TODO defer script -->
+        <script defer type='text/javascript' src='https://cfwww.hgregoire.com/template/js/index.js?hgver=3.0.1.56'></script> 
+        <!-- TODO remove unused script -->
+        <!-- <script type='text/javascript' src='https://cfwww.hgregoire.com/modules/hglazyload/assets/js/hg-lazy-load.min.js?hgver=3.0.1.56'></script>  -->
         
         <!-- Delay chat -->
         <!-- <script type="text/javascript">var __lc = {"license":2485721,"group":2};
@@ -5668,7 +5682,8 @@
             </map>
           </div>
         </div>
-        <script src="https://apis.google.com/js/platform.js" async defer>{"lang":"fr-CA"}</script> 
+        <!-- TODO defer script -->
+        <script defer src="https://apis.google.com/js/platform.js" async defer>{"lang":"fr-CA"}</script> 
         <div
           data-role="hg-loader">
           <script type="application/json" data-property-name="domEventCollections">[
