@@ -240,9 +240,7 @@
   text-align: justify
 }
 
-.hg-pictures.popover-active body.homepage #section-life-styles .popover-container .row .life-style .life-style-icon,.spin-pictures.popover-active body.homepage #section-life-styles .popover-container .row .life-style .life-style-icon,body.homepage #section-hero .section-blog .blog-link,body.homepage #section-life-styles .container .row .life-style .life-style-icon,body.homepage #section-life-styles .hg-pictures.popover-active .popover-container .row .life-style .life-style-icon,body.homepage #section-life-styles .spin-pictures.popover-active .popover-container .row .life-style .life-style-icon {
-  text-align: center
-}
+
 
 .page-template-page-vendre .collapsible-and-under .content.active {
   display: block
@@ -342,63 +340,10 @@
   margin: 0 0 10px
 }
 
-body.homepage #section-hero {
-  position: relative;
-  width: 100%;
-  background-image: url(https://cfwww.hgregoire.com/wp-content/themes/hgregoire/img/themes/hgregoire/pages/homepage/section-hero/naked-home-splash.jpg?111);
-  background-repeat: repeat;
-  min-height: 545px;
-  background-size: contain;
-  background-position: center
-}
 
-@media (min--moz-device-pixel-ratio:1.3),(-o-min-device-pixel-ratio: 2.6 / 2),(-webkit-min-device-pixel-ratio:1.3),(min-device-pixel-ratio:1.3),(-o-min-device-pixel-ratio:13/10),(min-resolution:1.3dppx) {
-  body.homepage #section-hero {
-      background-image:url(https://cfwww.hgregoire.com/wp-content/themes/hgregoire/img/themes/hgregoire/pages/homepage/section-hero/naked-home-splash@2x.jpg)
-  }
-}
 
-body.homepage #section-hero:before {
-  background-image: url(https://cfwww.hgregoire.com/wp-content/themes/hgregoire/img/themes/hgregoire/pages/homepage/section-hero/curve.png);
-  content: '';
-  height: 69px;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1
-}
 
-@media (max-width: 750px) {
-  body.homepage #section-hero {
-      min-height:470px
-  }
-}
 
-@media (max-width: 450px) {
-  body.homepage #section-hero {
-      min-height:470px
-  }
-}
-
-.hg-pictures.popover-active body.homepage #section-hero .popover-container,.spin-pictures.popover-active body.homepage #section-hero .popover-container,body.homepage #section-hero .container,body.homepage #section-hero .hg-pictures.popover-active .popover-container,body.homepage #section-hero .spin-pictures.popover-active .popover-container {
-  max-width: 1250px;
-  width: 94%;
-  z-index: 1;
-  margin: 0 auto;
-  position: relative;
-  min-height: 545px;
-  padding: 0 30px
-}
-
-@media (max-width: 1365px) {
-  .hg-pictures.popover-active body.homepage #section-hero .popover-container,.spin-pictures.popover-active body.homepage #section-hero .popover-container,body.homepage #section-hero .container,body.homepage #section-hero .hg-pictures.popover-active .popover-container,body.homepage #section-hero .spin-pictures.popover-active .popover-container {
-      width:100%;
-      padding: 0 46.5px
-  }
-}
 
 @media (max-width: 1020px) {
   .page-template-page-vendre .sell-your-car-section .icon-vendre-voiture {
@@ -27870,11 +27815,16 @@ body.fr .kogneta-mobile-lp .btn-lp>span {
   cursor: zoom-in;
   outline: 1px solid red;
 }
-.kogneta-hgregoire-vdp .vehicle-pictures-primary-photo .placeholder {
+.xwp-placeholder {
   position:absolute;
   top: 0;
   left: 0;
 }
+.xwp-placeholder__img {
+  width: 100%;
+  height: 100%;
+}
+
 
 /* @media (max-width: 1499px) {
   .kogneta-hgregoire-vdp .vehicle-pictures-primary-photo {
