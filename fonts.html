@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparaison entre Futura PT & Gilroy</title>
+  
+  <link rel="preload" href="fonts/radomir_tinkov_-_gilroy-medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/radomir_tinkov_-_gilroy-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/radomir_tinkov_-_gilroy-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/radomir_tinkov_-_gilroy-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/radomir_tinkov_-_gilroy-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/radomir_tinkov_-_gilroy-black-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/dfz4cwp.css">
+  <style>
+    body {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+    .futura {
+      font-family: futura-pt,sans-serif;
+    }
+    .futura--300 {
+      font-weight: 300
+    }
+    .futura--400 {
+      font-weight: 400
+    }
+    .futura--500 {
+      font-weight: 500
+    }
+    .futura--600 {
+      font-weight: 600
+    }
+    .futura--700 {
+      font-weight: 700
+    }
+    .futura--900 {
+      font-weight: 900
+    }
+
+    @font-face {
+      font-family: 'gilroy';
+      src: url('fonts/radomir_tinkov_-_gilroy-light-webfont.woff2') format('woff2'),
+          url('fonts/radomir_tinkov_-_gilroy-light-webfont.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: optional;
+    }
+    @font-face {
+      font-family: 'gilroy';
+      src: url('fonts/radomir_tinkov_-_gilroy-regular-webfont.woff2') format('woff2'),
+          url('fonts/radomir_tinkov_-_gilroy-regular-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: optional;
+    }
+    @font-face {
+      font-family: 'gilroy';
+      src: url('fonts/radomir_tinkov_-_gilroy-medium-webfont.woff2') format('woff2'),
+          url('fonts/radomir_tinkov_-_gilroy-medium-webfont.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: optional;
+    }
+    @font-face {
+      font-family: 'gilroy';
+      src: url('fonts/radomir_tinkov_-_gilroy-semibold-webfont.woff2') format('woff2'),
+          url('fonts/radomir_tinkov_-_gilroy-semibold-webfont.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: optional;
+    }
+    @font-face {
+      font-family: 'gilroy';
+      src: url('fonts/radomir_tinkov_-_gilroy-bold-webfont.woff2') format('woff2'),
+          url('fonts/radomir_tinkov_-_gilroy-bold-webfont.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: optional;
+    }
+    @font-face {
+      font-family: 'gilroy';
+      src: url('fonts/radomir_tinkov_-_gilroy-black-webfont.woff2') format('woff2'),
+          url('fonts/radomir_tinkov_-_gilroy-black-webfont.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: optional;
+    }
+
+    .gilroy {
+      font-family: gilroy, Arial, Helvetica, sans-serif;
+    }
+    .gilroy--300 {
+      font-weight: 300
+    }
+    .gilroy--400 {
+      font-weight: 400
+    }
+    .gilroy--500 {
+      font-weight: 500
+    }
+    .gilroy--600 {
+      font-weight: 600
+    }
+    .gilroy--700 {
+      font-weight: 700
+    }
+    .gilroy--900 {
+      font-weight: 900
+    }
+  </style>
+</head>
+<body>
+  <section class="futura">
+    <h1>Futura PT</h1>
+    <p class="futura--300">The quick brown fox jumps over the lazy dog 300 - light</p>
+    <p class="futura--400">The quick brown fox jumps over the lazy dog 400 - book</p>
+    <p class="futura--500">The quick brown fox jumps over the lazy dog 500 - medium</p>
+    <p class="futura--600">The quick brown fox jumps over the lazy dog 600 - heavy</p>
+    <p class="futura--700">The quick brown fox jumps over the lazy dog 700 - heavy</p>
+    <p class="futura--900">The quick brown fox jumps over the lazy dog 900 - heavy</p>
+  </section>
+  <section class="gilroy">
+    <h1>Gilroy</h1>
+    <p class="gilroy--300">The quick brown fox jumps over the lazy dog <span>300</span> - light</p>
+    <p class="gilroy--400">The quick brown fox jumps over the lazy dog <span>400</span> - regular</p>
+    <p class="gilroy--500">The quick brown fox jumps over the lazy dog <span>500</span> - medium</p>
+    <p class="gilroy--600">The quick brown fox jumps over the lazy dog <span>600</span> - semibold</p>
+    <p class="gilroy--700">The quick brown fox jumps over the lazy dog <span>700</span> - bold</p>
+    <p class="gilroy--900">The quick brown fox jumps over the lazy dog <span>900</span> - black</p>
+  </section>
+</body>
+</html>
